@@ -139,7 +139,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "heading": () => (/* binding */ heading),
 /* harmony export */   "navLinkItem": () => (/* binding */ navLinkItem),
 /* harmony export */   "navLinkText": () => (/* binding */ navLinkText),
-/* harmony export */   "navLinks": () => (/* binding */ navLinks)
+/* harmony export */   "navLinks": () => (/* binding */ navLinks),
+/* harmony export */   "siteTitle": () => (/* binding */ siteTitle)
 /* harmony export */ });
 // Exports
 var container = "layout-module--container--78b04";
@@ -147,6 +148,7 @@ var heading = "layout-module--heading--f158c";
 var navLinks = "layout-module--nav-links--1113b";
 var navLinkItem = "layout-module--nav-link-item--a5f0a";
 var navLinkText = "layout-module--nav-link-text--69cda";
+var siteTitle = "layout-module--site-title--e4dea";
 
 
 /***/ }),
@@ -2803,10 +2805,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _layout_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout.module.css */ "./src/components/layout.module.css");
+/* harmony import */ var _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/3159585216.json */ "./public/page-data/sq/d/3159585216.json");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var _layout_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout.module.css */ "./src/components/layout.module.css");
+
 
 
 
@@ -2814,25 +2818,59 @@ const Layout = ({
   pageTitle,
   children
 }) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.navLinks
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.navLinkItem
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  const data = _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0__.data;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.container
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("header", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.siteTitle
+  }, data.site.siteMetadata.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("ul", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinks
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("li", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinkItem
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "/",
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.navLinkText
-  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.navLinkItem
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinkText
+  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("li", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinkItem
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "/about",
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.navLinkText
-  }, "About")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2__.heading
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinkText
+  }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("li", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinkItem
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "/blog",
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.navLinkText
+  }, "Blog")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_3__.heading
   }, pageTitle), children));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
+
+/***/ }),
+
+/***/ "./src/components/seo.js":
+/*!*******************************!*\
+  !*** ./src/components/seo.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/3159585216.json */ "./public/page-data/sq/d/3159585216.json");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const Seo = ({
+  title
+}) => {
+  const data = _public_page_data_sq_d_3159585216_json__WEBPACK_IMPORTED_MODULE_0__.data;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, title, " | ", data.site.siteMetadata.title);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Seo);
 
 /***/ }),
 
@@ -2852,8 +2890,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
+/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
+/* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/seo */ "./src/components/seo.js");
 // Step 1: Import React
+
 
 
 
@@ -2863,15 +2903,15 @@ __webpack_require__.r(__webpack_exports__);
 const IndexPage = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     pageTitle: "Home Page"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "I'm making this by following the Gatsby Tutorial."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
-    alt: "Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera",
-    src: "https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3930937519.json */ "./.cache/caches/gatsby-plugin-image/3930937519.json")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "I'm making this by following the Gatsby Tutorial."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_4__.StaticImage, {
+    alt: "Clifford, a reddish-brown pitbull, dozing in a bean bag chair",
+    src: "../images/clifford.jpg",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3687736538.json */ "./.cache/caches/gatsby-plugin-image/3687736538.json")
   }));
 };
-
-// You'll learn about this in the next task, just copy it for now
-const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Home Page");
+const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_seo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  title: "Home Page"
+});
 
 // Step 3: Export your component
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
@@ -4484,14 +4524,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/3930937519.json":
+/***/ "./.cache/caches/gatsby-plugin-image/3687736538.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/3930937519.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/3687736538.json ***!
   \***********************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#887868","images":{"fallback":{"src":"/static/8fe15b6557b8e11d33c198a6a9024136/863ef/E1oMV3QVgAIr1NT.jpg","srcSet":"/static/8fe15b6557b8e11d33c198a6a9024136/d4d2a/E1oMV3QVgAIr1NT.jpg 512w,\\n/static/8fe15b6557b8e11d33c198a6a9024136/669f3/E1oMV3QVgAIr1NT.jpg 1024w,\\n/static/8fe15b6557b8e11d33c198a6a9024136/863ef/E1oMV3QVgAIr1NT.jpg 2048w","sizes":"(min-width: 2048px) 2048px, 100vw"},"sources":[{"srcSet":"/static/8fe15b6557b8e11d33c198a6a9024136/a79fe/E1oMV3QVgAIr1NT.webp 512w,\\n/static/8fe15b6557b8e11d33c198a6a9024136/2d898/E1oMV3QVgAIr1NT.webp 1024w,\\n/static/8fe15b6557b8e11d33c198a6a9024136/de790/E1oMV3QVgAIr1NT.webp 2048w","type":"image/webp","sizes":"(min-width: 2048px) 2048px, 100vw"}]},"width":2048,"height":1536}');
+module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#887868","images":{"fallback":{"src":"/static/f9c828ed9b8c73305efc9f6a217c0e96/de790/clifford.webp","srcSet":"/static/f9c828ed9b8c73305efc9f6a217c0e96/a79fe/clifford.webp 512w,\\n/static/f9c828ed9b8c73305efc9f6a217c0e96/2d898/clifford.webp 1024w,\\n/static/f9c828ed9b8c73305efc9f6a217c0e96/de790/clifford.webp 2048w","sizes":"(min-width: 2048px) 2048px, 100vw"},"sources":[]},"width":2048,"height":1536}');
 
 /***/ }),
 
@@ -4503,6 +4543,17 @@ module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#887868"
 
 "use strict";
 module.exports = [];
+
+/***/ }),
+
+/***/ "./public/page-data/sq/d/3159585216.json":
+/*!***********************************************!*\
+  !*** ./public/page-data/sq/d/3159585216.json ***!
+  \***********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"My First Gatsby Site Training"}}}}');
 
 /***/ })
 
