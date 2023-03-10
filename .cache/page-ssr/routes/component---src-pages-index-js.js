@@ -4553,7 +4553,7 @@ module.exports = [];
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"My First Gatsby Site Training"}}}}');
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"My Super Cool Blog"}}}}');
 
 /***/ })
 
